@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "$(ls -U -a --group-directories-first | awk '{if (NR>1) printf ","; printf "%s", $0} END {printf "\n"}')\n"
+ls -A | awk 'BEGIN{ RS = ""; FS = "\n" } { print $0 | "sort -t. -k1.1,1 -k2n" }' | tr '\n' ',' | sed 's/,$/\n/'
