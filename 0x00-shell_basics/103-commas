@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -U -a --group-directories-first | awk '{if (NR>1) printf ","; printf "%s", $0} END {printf "\n"}'
+printf "$(ls -U -a --group-directories-first | awk '{if (NR>1) printf ","; printf "%s", $0} END {printf "\n"}')\n"
