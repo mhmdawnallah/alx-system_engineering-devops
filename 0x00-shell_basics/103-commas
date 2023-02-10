@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -ap | awk 'BEGIN { ORS=", " } { print $0 } END { print "\n" }'
+ls -ap | sort -t . -k 1,1 -k 2,2 -k 3,3 | awk 'BEGIN { ORS=", " } NR > 1 { print $0 } NR == 1 { print $0 } END { print "\n" }'
