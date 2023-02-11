@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "Playing Starwars 🗡️"
+telnet towel.blinkenlights.nl
