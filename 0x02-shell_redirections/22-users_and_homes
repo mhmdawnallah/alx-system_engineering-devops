@@ -1,2 +1,2 @@
 #!/bin/bash
-getent passwd | while read -r line; do echo "$(echo $line | cut -d: -f1): $(echo $line | cut -d: -f6)"; done | sort
+cut -d":" -f1,6 /etc/passwd | sort
