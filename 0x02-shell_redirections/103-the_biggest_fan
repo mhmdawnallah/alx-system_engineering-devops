@@ -1,0 +1,2 @@
+#!/bin/bash
+cat | cut  -f1 | sort | uniq -c | sort -nr | sed 's/^[ \t]*//;s/[ \t]*$//' | cut -d" " -f2 | head -n 11
