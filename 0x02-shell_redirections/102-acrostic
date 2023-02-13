@@ -1,2 +1,2 @@
 #!/bin/bash
-decoded_message="" && while read line; do decoded_message="$decoded_message${line:0:1}"; done && echo $decoded_message
+cat | cut -c1 | tr -d '\n' && echo
